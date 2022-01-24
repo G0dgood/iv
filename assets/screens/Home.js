@@ -2,21 +2,16 @@ import React from "react";
 import { StyleSheet, SafeAreaView, ScrollView, Text, View } from 'react-native';
 import { Badge } from 'react-native-elements';
 import Header from '../components/Header'
-import CarouselBanner from '../components/Carousel';
-import Banner from './Bsnner';
-import CarouselCards from '../components/CarouselCards'
-// import Carousel from 'react-native-snap-carousel';
-// import sliderData from '../components/data';
-import { windowWidth } from "../utils/Dimensions";
-// import { BannerSlider } from "../components/BannerSlider";
+import BannerSlider from './BannerSlider';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-
+import Entypo from 'react-native-vector-icons/Entypo';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import Footer from '../components/Footer'
 
 const Home = () => {
- // const renderBanner = ({ item, index }) => {
- //   return <BannerSlider data={item} />
- // }
 
  return (
 
@@ -27,66 +22,138 @@ const Home = () => {
      <Text style={styles.morning} >GOOD MORNING</Text>
      <Text style={styles.UserName} >Kelechi Adekunle</Text>
     </View>
-    {/* <Carousel
-          ref={(c) => { _carousel = c; }}
-          data={sliderData}
-          renderItem={renderBanner}
-          sliderWidth={windowWidth - 40}
-          itemWidth={300}
-        /> */}
-    {/* <CarouselBanner /> */}
-    <Banner />
+
+    <BannerSlider />
    </View>
    <View style={styles.Badge}>
     <Text style={styles.schedule}>New verification schedule </Text>
     <Badge value="10" status="warning" />
    </View>
    <View style={styles.verifications}>
-    <Text style={styles.schedule}>Latest verifications</Text>
+    <Text style={styles.schedule1}>Latest verifications</Text>
     <View style={styles.keyboardarrow}>
      <Text style={styles.Viewall}>View all</Text>
      <Text>
-      <MaterialIcons style={styles.arrowright} name="keyboard-arrow-right" size={30} />
+      <MaterialIcons style={styles.arrowright} name="keyboard-arrow-right" size={25} />
      </Text>
     </View>
    </View>
-
-   <View style={styles.LatestView}>
-    <View style={styles.viewIcon}>
-
-     <Text ><AntDesign style={styles.idcard} name="idcard" size={20} /></Text>
+   {/* Address Section */}
+   <ScrollView style={styles.ViewLast}>
+    <View style={styles.LatestView}>
+     <View style={styles.viewIcon}>
+      <Text ><AntDesign style={styles.idcard} name="idcard" size={17} /></Text>
+     </View>
+     <View style={styles.UpNamedownName}>
+      <Text style={styles.UpName}>Desmond Kelvin</Text>
+      <Text style={styles.downName}>Employee verification (2days ago)</Text>
+     </View>
+     <View ><Text style={styles.LatestName}> <MaterialIcons style={styles.arrowrightName} name="keyboard-arrow-right" size={30} /></Text></View>
     </View>
-    <View style={styles.UpNamedownName}>
-     <Text style={styles.UpName}>Desmond Kelvin</Text>
-     <Text style={styles.downName}>Employee verification (2days ago)</Text>
+    <View style={styles.LatestView}>
+     <View style={styles.viewIcon2}>
+      <Text ><Entypo style={styles.idcard2} name="location" size={15} /></Text>
+     </View>
+     <View style={styles.UpNamedownName}>
+      <Text style={styles.UpName}>Fegor Bola</Text>
+      <Text style={styles.downName}>Tenant verification (2days ago)</Text>
+     </View>
+     <View ><Text style={styles.LatestName}> <MaterialIcons style={styles.arrowrightName} name="keyboard-arrow-right" size={30} /></Text></View>
     </View>
-    <View ><Text style={styles.LatestName}> <MaterialIcons style={styles.arrowrightName} name="keyboard-arrow-right" size={30} /></Text></View>
-   </View>
-
+    <View style={styles.LatestView}>
+     <View style={styles.viewIcon3}>
+      <Text ><Ionicons style={styles.idcard3} name="business" size={17} /></Text>
+     </View>
+     <View style={styles.UpNamedownName}>
+      <Text style={styles.UpName}>Blessing King</Text>
+      <Text style={styles.downName}>PWA verification (2days ago)</Text>
+     </View>
+     <View ><Text style={styles.LatestName}> <MaterialIcons style={styles.arrowrightName} name="keyboard-arrow-right" size={30} /></Text></View>
+    </View>
+    <View style={styles.LatestView}>
+     <View style={styles.viewIcon2}>
+      <Text ><Entypo style={styles.idcard2} name="location" size={15} /></Text>
+     </View>
+     <View style={styles.UpNamedownName}>
+      <Text style={styles.UpName}>Kenneth Jennifer</Text>
+      <Text style={styles.downName}>Tenant verification (2days ago)</Text>
+     </View>
+     <View ><Text style={styles.LatestName}> <MaterialIcons style={styles.arrowrightName} name="keyboard-arrow-right" size={30} /></Text></View>
+    </View>
+    <View style={styles.LatestView}>
+     <View style={styles.viewIcon}>
+      <Text ><AntDesign style={styles.idcard} name="idcard" size={15} /></Text>
+     </View>
+     <View style={styles.UpNamedownName}>
+      <Text style={styles.UpName}>Grace Adora</Text>
+      <Text style={styles.downName}>Employee verification (3days ago)</Text>
+     </View>
+     <View ><Text style={styles.LatestName}> <MaterialIcons style={styles.arrowrightName} name="keyboard-arrow-right" size={30} /></Text></View>
+    </View>
+    <View style={styles.LatestView}>
+     <View style={styles.viewIcon4}>
+      <Text ><FontAwesome5 style={styles.idcard4} name="people-arrows" size={15} /></Text>
+     </View>
+     <View style={styles.UpNamedownName}>
+      <Text style={styles.UpName}>Bukola Adenike</Text>
+      <Text style={styles.downName}>Guarantor verification (3days ago)</Text>
+     </View>
+     <View ><Text style={styles.LatestName}> <MaterialIcons style={styles.arrowrightName} name="keyboard-arrow-right" size={30} /></Text></View>
+    </View>
+   </ScrollView>
+   <Footer />
   </SafeAreaView >
  )
 };
 
 export default Home;
 
-{/* <Image source={photo}
- style={{ width: 55, height: 55, borderRadius: 10, marginRight: 8 }}
-/> */}
+
 
 const styles = StyleSheet.create({
+ ViewLast: {
+  marginBottom: 28,
+ },
 
  idcard: {
   color: '#0D8B8B'
  },
+ idcard2: {
+  color: '#51A3FF'
+ },
+ idcard3: {
+  color: '#FD937C'
+ },
+ idcard4: {
+  color: '#D777FB'
+ },
 
  UpNamedownName: {
-  position: 'relative',
-  left: -15
+  position: 'absolute',
+  left: 80
  },
 
  viewIcon: {
   backgroundColor: '#D9FDFB',
-  padding: 18,
+  padding: 15,
+  borderRadius: 25,
+  marginLeft: 5
+ },
+ viewIcon2: {
+  backgroundColor: '#D9E8FD',
+  padding: 15,
+  borderRadius: 25,
+  marginLeft: 5
+ },
+ viewIcon3: {
+  backgroundColor: '#FEEAEA',
+  padding: 15,
+  borderRadius: 25,
+  marginLeft: 5
+ },
+ viewIcon4: {
+  backgroundColor: '#F1D9FD',
+  padding: 15,
   borderRadius: 25,
   marginLeft: 5
  },
@@ -95,8 +162,8 @@ const styles = StyleSheet.create({
   color: '#AAA'
  },
  UpName: {
-  fontSize: 16,
-  fontWeight: '800'
+  fontSize: 14,
+  fontWeight: '700'
  },
 
  LatestName: {
@@ -112,19 +179,19 @@ const styles = StyleSheet.create({
   borderWidth: 1,
   borderColor: '#BEC3D5',
   padding: 5,
-  alignItems: 'center'
+  alignItems: 'center',
+  marginBottom: 10,
  },
 
  verifications: {
   width: '100%',
   flexDirection: "row",
   justifyContent: "space-between",
-  padding: 20,
-  fontSize: 18
+  padding: 15,
  },
 
  schedule: {
-  fontSize: 18
+  fontSize: 15
  },
  arrowrightName: {
   color: '#BEC3D5',
@@ -146,13 +213,13 @@ const styles = StyleSheet.create({
  Badge: {
   flexDirection: "row",
   justifyContent: "space-between",
-  padding: 20,
-  marginTop: 30,
+  padding: 18,
+  marginTop: 5,
   backgroundColor: "#FEEAEA",
   borderRadius: 5,
   marginLeft: 18,
   marginRight: 18,
-  fontSize: 24,
+  fontSize: 20,
   fontWeight: 'bold'
  },
 
@@ -178,39 +245,13 @@ const styles = StyleSheet.create({
  mainContainer: {
   flex: 1,
   backgroundColor: "#fff",
+  paddingTop: Platform.OS === 'android' ? 25 : 0,
  },
 
  mainScroll: {
   padding: 20,
-  maxHeight: 280
+  maxHeight: 270,
  },
 });
 
 
-// <View style={{
-//  flexDirection: 'row', justifyContent: 'space-between',
-//  alignItems: 'center', marginBottom: 20,
-// }}>
-//  <View style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}>
-//   <Ionicons name="finger-print" size={93} />
-//   <View style={{ width: windowWidth - 220 }}>
-//    <Text
-//     style={{
-//      color: '#333',
-//      fontFamily: 'Roboto-Medium',
-//      fontSize: 14,
-//     }}>
-//     <Ionicons name="finger-print" size={93} />
-//    </Text>
-//    <Text
-//     numberOfLines={1}
-//     style={{
-//      color: '#333',
-//      fontFamily: 'Roboto-Medium',
-//      fontSize: 14,
-//      textTransform: 'uppercase',
-//     }}>
-//     <Ionicons name="finger-print" size={93} />
-//    </Text>
-//   </View>
-//  </View>
