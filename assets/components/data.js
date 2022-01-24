@@ -1,6 +1,4 @@
 
-import { StyleSheet, Image } from 'react-native';
-import Ionicons from 'react-native-vector-icons/Ionicons';
 
 export default data = [
 
@@ -8,7 +6,7 @@ export default data = [
     {
         title: 'Amount Earned',
         body: '105,000',
-        imgUrl: '../image/fingerprint.svg'
+        imgUrl: '../image/AmountFinger.png'
     },
     {
         title: 'Total Verifications',
@@ -21,3 +19,4 @@ export default data = [
         imgUrl: '../image/fingerprint.png'
     },
 ]
+

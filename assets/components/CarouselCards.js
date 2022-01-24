@@ -32,7 +32,6 @@ const CarouselCards = () => {
             width: 10,
             height: 10,
             borderRadius: 5,
-            marginHorizontal: 0.5,
             backgroundColor: 'rgba(255, 255, 255, 0.92)',
 
 
@@ -53,7 +52,7 @@ export default CarouselCards
 const styles = StyleSheet.create({
   pagination: {
     position: "relative",
-    top: -60,
+    top: -75,
     left: 0,
     right: 0,
     bottom: 0,
