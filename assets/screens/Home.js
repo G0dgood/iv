@@ -42,63 +42,94 @@ const Home = () => {
    <ScrollView style={styles.ViewLast}>
     <View style={styles.LatestView}>
      <View style={styles.viewIcon}>
-      <Text ><AntDesign style={styles.idcard} name="idcard" size={17} /></Text>
+      <Text >
+       <AntDesign style={styles.idcard} name="idcard" size={17} /></Text>
      </View>
      <View style={styles.UpNamedownName}>
       <Text style={styles.UpName}>Desmond Kelvin</Text>
       <Text style={styles.downName}>Employee verification (2days ago)</Text>
      </View>
-     <View ><Text style={styles.LatestName}> <MaterialIcons style={styles.arrowrightName} name="keyboard-arrow-right" size={30} /></Text></View>
+     <View ><Text style={styles.LatestName}>
+      <MaterialIcons style={styles.arrowrightName} name="keyboard-arrow-right" size={30} />
+     </Text>
+     </View>
     </View>
     <View style={styles.LatestView}>
      <View style={styles.viewIcon2}>
-      <Text ><Entypo style={styles.idcard2} name="location" size={15} /></Text>
+      <Text >
+       <Entypo style={styles.idcard2} name="location" size={15} />
+      </Text>
      </View>
      <View style={styles.UpNamedownName}>
       <Text style={styles.UpName}>Fegor Bola</Text>
       <Text style={styles.downName}>Tenant verification (2days ago)</Text>
      </View>
-     <View ><Text style={styles.LatestName}> <MaterialIcons style={styles.arrowrightName} name="keyboard-arrow-right" size={30} /></Text></View>
+     <View ><Text style={styles.LatestName}> <MaterialIcons style={styles.arrowrightName} name="keyboard-arrow-right" size={30} />
+     </Text>
+     </View>
     </View>
     <View style={styles.LatestView}>
      <View style={styles.viewIcon3}>
-      <Text ><Ionicons style={styles.idcard3} name="business" size={17} /></Text>
+      <Text >
+       <Ionicons style={styles.idcard3} name="business" size={17} />
+      </Text>
      </View>
      <View style={styles.UpNamedownName}>
       <Text style={styles.UpName}>Blessing King</Text>
       <Text style={styles.downName}>PWA verification (2days ago)</Text>
      </View>
-     <View ><Text style={styles.LatestName}> <MaterialIcons style={styles.arrowrightName} name="keyboard-arrow-right" size={30} /></Text></View>
+     <View >
+      <Text style={styles.LatestName}>
+       <MaterialIcons style={styles.arrowrightName} name="keyboard-arrow-right" size={30} />
+      </Text>
+     </View>
     </View>
     <View style={styles.LatestView}>
      <View style={styles.viewIcon2}>
-      <Text ><Entypo style={styles.idcard2} name="location" size={15} /></Text>
+      <Text >
+       <Entypo style={styles.idcard2} name="location" size={15} />
+      </Text>
      </View>
      <View style={styles.UpNamedownName}>
       <Text style={styles.UpName}>Kenneth Jennifer</Text>
       <Text style={styles.downName}>Tenant verification (2days ago)</Text>
      </View>
-     <View ><Text style={styles.LatestName}> <MaterialIcons style={styles.arrowrightName} name="keyboard-arrow-right" size={30} /></Text></View>
+     <View >
+      <Text style={styles.LatestName}>
+       <MaterialIcons style={styles.arrowrightName} name="keyboard-arrow-right" size={30} />
+      </Text>
+     </View>
     </View>
     <View style={styles.LatestView}>
      <View style={styles.viewIcon}>
-      <Text ><AntDesign style={styles.idcard} name="idcard" size={15} /></Text>
+      <Text >
+       <AntDesign style={styles.idcard} name="idcard" size={15} />
+      </Text>
      </View>
      <View style={styles.UpNamedownName}>
       <Text style={styles.UpName}>Grace Adora</Text>
       <Text style={styles.downName}>Employee verification (3days ago)</Text>
      </View>
-     <View ><Text style={styles.LatestName}> <MaterialIcons style={styles.arrowrightName} name="keyboard-arrow-right" size={30} /></Text></View>
+     <View >
+      <Text style={styles.LatestName}>
+       <MaterialIcons style={styles.arrowrightName} name="keyboard-arrow-right" size={30} />
+      </Text>
+     </View>
     </View>
     <View style={styles.LatestView}>
      <View style={styles.viewIcon4}>
-      <Text ><FontAwesome5 style={styles.idcard4} name="people-arrows" size={15} /></Text>
+      <Text >
+       <FontAwesome5 style={styles.idcard4} name="people-arrows" size={15} /></Text>
      </View>
      <View style={styles.UpNamedownName}>
       <Text style={styles.UpName}>Bukola Adenike</Text>
       <Text style={styles.downName}>Guarantor verification (3days ago)</Text>
      </View>
-     <View ><Text style={styles.LatestName}> <MaterialIcons style={styles.arrowrightName} name="keyboard-arrow-right" size={30} /></Text></View>
+     <View >
+      <Text style={styles.LatestName}>
+       <MaterialIcons style={styles.arrowrightName} name="keyboard-arrow-right" size={30} />
+      </Text>
+     </View>
     </View>
    </ScrollView>
    <Footer />

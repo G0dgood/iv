@@ -4,7 +4,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const PasswordEmail = ({ navigation }) => (
-    <SafeAreaView style={styles.resetMial}>
+    <SafeAreaView style={styles.resetMailContainer}>
         <AntDesign style={styles.arrowleft} name="arrowleft" size={30} onPress={() => navigation.navigate('PasswordReset')} />
         <View style={styles.mailSent}>
             <Text> <MaterialIcons style={styles.emailRead} name="mark-email-read" size={93} /></Text>
@@ -24,9 +24,10 @@ export default PasswordEmail
 
 
 const styles = StyleSheet.create({
-    resetMial: {
+    resetMailContainer: {
         backgroundColor: "white",
-        height: '100%'
+        height: '100%',
+        paddingTop: Platform.OS === 'android' ? 30 : 0,
     },
     arrowleft: {
         marginLeft: 20,

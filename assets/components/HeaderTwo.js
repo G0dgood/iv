@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text, ImageBackground, SafeAreaView } from 'react-native';
+import { StyleSheet, View, Text, ImageBackground, SafeAreaView, TouchableOpacity } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import { useNavigation } from '@react-navigation/native';
 
@@ -22,9 +22,9 @@ const HeaderTwo = ({ Titles }) => {
             <View>
                 <Text style={styles.headerTitle}>{Titles}</Text>
             </View>
-            <View style={styles.profileImage}>
+            <TouchableOpacity style={styles.profileImage} onPress={() => navigation.navigate('Accounts')}>
                 <ImageBackground style={styles.imageHeader} source={require('../image/john.png')} />
-            </View>
+            </TouchableOpacity>
         </SafeAreaView>
     )
 };
