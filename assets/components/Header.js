@@ -11,7 +11,7 @@ const Header = () => {
     return <View style={styles.mainContainer}>
 
         <TouchableOpacity style={styles.headerText} onPress={() => navigation.navigate('Notification')}>
-            <MaterialIcons name="notifications-on" size={35} />
+            <MaterialIcons name="notifications-on" size={30} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.profileImage} onPress={() => navigation.navigate('Accounts')}>
             <ImageBackground style={styles.imageHeader} source={require('../image/john.png')} />

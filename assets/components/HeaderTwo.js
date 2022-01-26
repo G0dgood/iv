@@ -16,7 +16,7 @@ const HeaderTwo = ({ Titles }) => {
             <View>
 
                 <Text style={styles.headerText} onPress={() => navigation.navigate('Home')}>
-                    <AntDesign style={styles.arrowleft} name="arrowleft" size={30} />
+                    <AntDesign style={styles.arrowleft} name="arrowleft" size={25} />
                 </Text>
             </View>
             <View>
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#fff",
         flexDirection: "row",
         justifyContent: "space-between",
-        marginTop: 20,
+        marginTop: 10,
         marginLeft: 20,
         marginRight: 20,
         marginBottom: 20,

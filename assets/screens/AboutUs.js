@@ -13,7 +13,7 @@ const AboutUs = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.infoContainer}>
       <StatusBar style="auto" />
-      <AntDesign style={styles.arrowleft} name="arrowleft" size={30} onPress={() => navigation.navigate('Accounts')} />
+      <AntDesign style={styles.arrowleft} name="arrowleft" size={25} onPress={() => navigation.navigate('Accounts')} />
       <Text style={styles.companyinfo}> COMPANY INFO </Text>
       <Text style={styles.AboutUsText}>About us</Text>
       <Text style={styles.AboutUsSubText}>We are focused on solving and digitizing Nigeria’s biggest identity challenges, through Company, Certificate, Employee, Tenant and Property Verification for individuals and businesses.
@@ -63,7 +63,7 @@ export default AboutUs;
 const styles = StyleSheet.create({
 
   infoContainer: {
-    paddingTop: Platform.OS === 'android' ? 40 : 0,
+    paddingTop: Platform.OS === 'android' ? 30 : 0,
   },
 
   address: {
@@ -97,6 +97,7 @@ const styles = StyleSheet.create({
   },
 
   arrowleft: {
+    marginTop: 20,
     marginLeft: 20,
   },
 

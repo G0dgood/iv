@@ -1,5 +1,6 @@
 import React from "react";
-import { StyleSheet, SafeAreaView, ScrollView, Text, View } from 'react-native';
+import { StyleSheet, SafeAreaView, ScrollView, Text, View, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { Badge } from 'react-native-elements';
 import Header from '../components/Header'
 import BannerSlider from './BannerSlider';
@@ -13,6 +14,8 @@ import Footer from '../components/Footer'
 
 const Home = () => {
 
+ const navigation = useNavigation();
+
  return (
 
   <SafeAreaView style={styles.mainContainer}>
@@ -25,16 +28,16 @@ const Home = () => {
 
     <BannerSlider />
    </View>
-   <View style={styles.Badge}>
+   <TouchableOpacity style={styles.Badge} onPress={() => navigation.navigate('Schedule')}>
     <Text style={styles.schedule}>New verification schedule </Text>
-    <Badge value="10" status="warning" />
-   </View>
+    <Badge value="2" status="warning" />
+   </TouchableOpacity>
    <View style={styles.verifications}>
     <Text style={styles.schedule1}>Latest verifications</Text>
     <View style={styles.keyboardarrow}>
      <Text style={styles.Viewall}>View all</Text>
      <Text>
-      <MaterialIcons style={styles.arrowright} name="keyboard-arrow-right" size={25} />
+      <MaterialIcons style={styles.arrowright} name="keyboard-arrow-right" size={22} />
      </Text>
     </View>
    </View>
@@ -43,35 +46,35 @@ const Home = () => {
     <View style={styles.LatestView}>
      <View style={styles.viewIcon}>
       <Text >
-       <AntDesign style={styles.idcard} name="idcard" size={17} /></Text>
+       <AntDesign style={styles.idcard} name="idcard" size={12} /></Text>
      </View>
      <View style={styles.UpNamedownName}>
       <Text style={styles.UpName}>Desmond Kelvin</Text>
       <Text style={styles.downName}>Employee verification (2days ago)</Text>
      </View>
      <View ><Text style={styles.LatestName}>
-      <MaterialIcons style={styles.arrowrightName} name="keyboard-arrow-right" size={30} />
+      <MaterialIcons style={styles.arrowrightName} name="keyboard-arrow-right" size={20} />
      </Text>
      </View>
     </View>
     <View style={styles.LatestView}>
      <View style={styles.viewIcon2}>
       <Text >
-       <Entypo style={styles.idcard2} name="location" size={15} />
+       <Entypo style={styles.idcard2} name="location" size={12} />
       </Text>
      </View>
      <View style={styles.UpNamedownName}>
       <Text style={styles.UpName}>Fegor Bola</Text>
       <Text style={styles.downName}>Tenant verification (2days ago)</Text>
      </View>
-     <View ><Text style={styles.LatestName}> <MaterialIcons style={styles.arrowrightName} name="keyboard-arrow-right" size={30} />
+     <View ><Text style={styles.LatestName}> <MaterialIcons style={styles.arrowrightName} name="keyboard-arrow-right" size={20} />
      </Text>
      </View>
     </View>
     <View style={styles.LatestView}>
      <View style={styles.viewIcon3}>
       <Text >
-       <Ionicons style={styles.idcard3} name="business" size={17} />
+       <Ionicons style={styles.idcard3} name="business" size={12} />
       </Text>
      </View>
      <View style={styles.UpNamedownName}>
@@ -80,14 +83,14 @@ const Home = () => {
      </View>
      <View >
       <Text style={styles.LatestName}>
-       <MaterialIcons style={styles.arrowrightName} name="keyboard-arrow-right" size={30} />
+       <MaterialIcons style={styles.arrowrightName} name="keyboard-arrow-right" size={20} />
       </Text>
      </View>
     </View>
     <View style={styles.LatestView}>
      <View style={styles.viewIcon2}>
       <Text >
-       <Entypo style={styles.idcard2} name="location" size={15} />
+       <Entypo style={styles.idcard2} name="location" size={12} />
       </Text>
      </View>
      <View style={styles.UpNamedownName}>
@@ -96,14 +99,14 @@ const Home = () => {
      </View>
      <View >
       <Text style={styles.LatestName}>
-       <MaterialIcons style={styles.arrowrightName} name="keyboard-arrow-right" size={30} />
+       <MaterialIcons style={styles.arrowrightName} name="keyboard-arrow-right" size={20} />
       </Text>
      </View>
     </View>
     <View style={styles.LatestView}>
      <View style={styles.viewIcon}>
       <Text >
-       <AntDesign style={styles.idcard} name="idcard" size={15} />
+       <AntDesign style={styles.idcard} name="idcard" size={12} />
       </Text>
      </View>
      <View style={styles.UpNamedownName}>
@@ -112,14 +115,14 @@ const Home = () => {
      </View>
      <View >
       <Text style={styles.LatestName}>
-       <MaterialIcons style={styles.arrowrightName} name="keyboard-arrow-right" size={30} />
+       <MaterialIcons style={styles.arrowrightName} name="keyboard-arrow-right" size={20} />
       </Text>
      </View>
     </View>
     <View style={styles.LatestView}>
      <View style={styles.viewIcon4}>
       <Text >
-       <FontAwesome5 style={styles.idcard4} name="people-arrows" size={15} /></Text>
+       <FontAwesome5 style={styles.idcard4} name="people-arrows" size={12} /></Text>
      </View>
      <View style={styles.UpNamedownName}>
       <Text style={styles.UpName}>Bukola Adenike</Text>
@@ -127,7 +130,7 @@ const Home = () => {
      </View>
      <View >
       <Text style={styles.LatestName}>
-       <MaterialIcons style={styles.arrowrightName} name="keyboard-arrow-right" size={30} />
+       <MaterialIcons style={styles.arrowrightName} name="keyboard-arrow-right" size={20} />
       </Text>
      </View>
     </View>
@@ -161,39 +164,43 @@ const styles = StyleSheet.create({
 
  UpNamedownName: {
   position: 'absolute',
-  left: 80
+  left: 60
  },
 
  viewIcon: {
   backgroundColor: '#D9FDFB',
-  padding: 15,
+  padding: 12,
   borderRadius: 25,
   marginLeft: 5
  },
+
  viewIcon2: {
   backgroundColor: '#D9E8FD',
-  padding: 15,
+  padding: 12,
   borderRadius: 25,
   marginLeft: 5
  },
+
  viewIcon3: {
   backgroundColor: '#FEEAEA',
-  padding: 15,
+  padding: 12,
   borderRadius: 25,
   marginLeft: 5
  },
+
  viewIcon4: {
   backgroundColor: '#F1D9FD',
-  padding: 15,
+  padding: 12,
   borderRadius: 25,
   marginLeft: 5
  },
 
  downName: {
-  color: '#AAA'
+  color: '#AAA',
+  fontSize: 12
  },
  UpName: {
-  fontSize: 14,
+  fontSize: 12,
   fontWeight: '700'
  },
 
@@ -211,7 +218,7 @@ const styles = StyleSheet.create({
   borderColor: '#BEC3D5',
   padding: 5,
   alignItems: 'center',
-  marginBottom: 10,
+  marginBottom: 18,
  },
 
  verifications: {
@@ -224,6 +231,7 @@ const styles = StyleSheet.create({
  schedule: {
   fontSize: 15
  },
+
  arrowrightName: {
   color: '#BEC3D5',
  },
@@ -232,7 +240,7 @@ const styles = StyleSheet.create({
  },
  Viewall: {
   color: '#007AFF',
-  fontWeight: '800'
+  fontWeight: '600'
  },
  keyboardarrow: {
 
@@ -244,12 +252,12 @@ const styles = StyleSheet.create({
  Badge: {
   flexDirection: "row",
   justifyContent: "space-between",
-  padding: 18,
+  padding: 15,
   marginTop: 5,
   backgroundColor: "#FEEAEA",
   borderRadius: 5,
-  marginLeft: 18,
-  marginRight: 18,
+  marginLeft: 16,
+  marginRight: 16,
   fontSize: 20,
   fontWeight: 'bold'
  },
@@ -276,11 +284,11 @@ const styles = StyleSheet.create({
  mainContainer: {
   flex: 1,
   backgroundColor: "#fff",
-  paddingTop: Platform.OS === 'android' ? 25 : 0,
+  paddingTop: Platform.OS === 'android' ? 25 : 10,
  },
 
  mainScroll: {
-  padding: 20,
+  padding: 10,
   maxHeight: 270,
  },
 });
