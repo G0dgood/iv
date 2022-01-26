@@ -40,7 +40,7 @@ const Accounts = () => {
    <View style={styles.AvaterIDInfo} >
     <View style={styles.AvaterIDColor}>
      <Text style={styles.colorAvater}>
-      <Feather name="user" size={25} />
+      <Feather name="user" size={12} />
      </Text>
     </View>
     <View style={styles.infoArrowLeft}>
@@ -49,7 +49,7 @@ const Accounts = () => {
      </View>
      <View style={styles.arrowrightMove}>
       <Text >
-       <MaterialIcons style={styles.arrowrightColor} name="keyboard-arrow-right" size={30} />
+       <MaterialIcons style={styles.arrowrightColor} name="keyboard-arrow-right" size={25} />
       </Text>
      </View>
     </View>
@@ -58,7 +58,7 @@ const Accounts = () => {
    <View style={styles.AvaterIDInfo}>
     <View style={styles.AvaterIDColor}>
      <Text style={styles.colorAvater}>
-      <Feather name="lock" size={25} />
+      <Feather name="lock" size={12} />
      </Text>
     </View>
     <View style={styles.infoArrowLeft}>
@@ -67,7 +67,7 @@ const Accounts = () => {
      </View>
      <View style={styles.arrowrightMove}>
       <Text >
-       <MaterialIcons style={styles.arrowrightColor} name="keyboard-arrow-right" size={30} />
+       <MaterialIcons style={styles.arrowrightColor} name="keyboard-arrow-right" size={25} />
       </Text>
      </View>
     </View>
@@ -76,7 +76,7 @@ const Accounts = () => {
    <View style={styles.AvaterIDInfo}>
     <View style={styles.AvaterIDColor}>
      <Text style={styles.colorAvater}>
-      <Feather name="headphones" size={25} />
+      <Feather name="headphones" size={12} />
      </Text>
     </View>
     <View style={styles.infoArrowLeft}>
@@ -86,7 +86,7 @@ const Accounts = () => {
      </View>
      <View style={styles.arrowrightMove}>
       <Text >
-       <MaterialIcons style={styles.arrowrightColor} name="keyboard-arrow-right" size={30} />
+       <MaterialIcons style={styles.arrowrightColor} name="keyboard-arrow-right" size={25} />
       </Text>
      </View>
     </View>
@@ -103,7 +103,7 @@ export default Accounts;
 const styles = StyleSheet.create({
  arrowrightMove: {
   position: 'absolute',
-  left: Platform.OS === 'android' ? 225 : 260,
+  left: Platform.OS === 'android' ? 240 : 275,
  },
 
  arrowrightColor: {
@@ -121,14 +121,14 @@ const styles = StyleSheet.create({
 
  AvaterIDColorText: {
   fontWeight: '600',
-  fontSize: 14,
+  fontSize: 12,
   alignItems: 'center',
   justifyContent: 'center'
  },
 
  AvaterIDColor: {
-  width: 40,
-  height: 40,
+  width: 30,
+  height: 30,
   backgroundColor: '#D9E8FD',
   borderRadius: 50,
   margin: 5,
@@ -139,9 +139,9 @@ const styles = StyleSheet.create({
  },
 
  AvaterIDInfo: {
-  height: 50,
-  borderColor: '#aaa',
-  borderWidth: 1,
+  height: 42,
+  borderColor: '#BEC3D5',
+  borderWidth: 0.8,
   alignSelf: 'center',
   borderRadius: 5,
   flexDirection: 'row',

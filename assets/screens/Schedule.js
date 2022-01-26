@@ -17,7 +17,7 @@ const Schedule = () => {
     <View style={styles.ScheduleView}>
      <View style={styles.ScheduleNameUp}>
       <Text style={styles.ScheduleTextAlign}>
-       <AntDesign style={styles.idcard} name="idcard" size={17} />
+       <AntDesign style={styles.idcard} name="idcard" size={10} />
       </Text>
      </View>
      <View style={styles.ScheduleNameContainer}>
@@ -29,7 +29,7 @@ const Schedule = () => {
       </View>
       <View style={styles.ScheduleNameArrow}>
        <Text>
-        <MaterialIcons style={styles.ScheduleArrowright} name="keyboard-arrow-right" size={30} />
+        <MaterialIcons style={styles.ScheduleArrowright} name="keyboard-arrow-right" size={25} />
        </Text>
       </View>
      </View>
@@ -38,7 +38,7 @@ const Schedule = () => {
     <View style={styles.ScheduleView}>
      <View style={styles.ScheduleNameUp2}>
       <Text style={styles.ScheduleTextAlign2}>
-       <Entypo style={styles.idcard2} name="location" size={15} />
+       <Entypo style={styles.idcard2} name="location" size={10} />
       </Text>
      </View>
      <View style={styles.ScheduleNameContainer}>
@@ -50,7 +50,7 @@ const Schedule = () => {
       </View>
       <View style={styles.ScheduleNameArrow}>
        <Text>
-        <MaterialIcons style={styles.ScheduleArrowright} name="keyboard-arrow-right" size={30} />
+        <MaterialIcons style={styles.ScheduleArrowright} name="keyboard-arrow-right" size={25} />
        </Text>
       </View>
      </View>
@@ -84,8 +84,8 @@ const styles = StyleSheet.create({
  },
 
  ScheduleNameTop2: {
-  fontSize: 12,
-  fontWeight: '500',
+  fontSize: 10,
+  fontWeight: '400',
   paddingEnd: 10,
   // paddingLeft: 10
   color: 'red',
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
 
  },
  ScheduleNameTop: {
-  fontSize: 15,
+  fontSize: 11,
   fontWeight: 'bold',
   marginRight: '5%'
  },
@@ -105,13 +105,13 @@ const styles = StyleSheet.create({
 
  ScheduleNameArrow: {
   position: 'absolute',
-  left: Platform.OS === 'android' ? 225 : 260,
+  left: Platform.OS === 'android' ? 235 : 270,
   marginTop: 4
  },
 
  ScheduleNameUp2: {
-  height: 40,
-  width: 40,
+  height: 30,
+  width: 30,
   backgroundColor: '#D9E8FD',
   borderRadius: 50,
   justifyContent: 'center',
@@ -119,8 +119,8 @@ const styles = StyleSheet.create({
   margin: 10,
  },
  ScheduleNameUp: {
-  height: 40,
-  width: 40,
+  height: 30,
+  width: 30,
   backgroundColor: '#D9FDFB',
   borderRadius: 50,
   justifyContent: 'center',
@@ -134,7 +134,7 @@ const styles = StyleSheet.create({
  },
 
  ScheduleView: {
-  height: 60,
+  height: 42,
   borderColor: '#aaa',
   borderWidth: 1,
   alignSelf: 'center',

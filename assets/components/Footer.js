@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text, TouchableOpacity, Button } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity, Button, Pressable } from 'react-native';
 import { Dimensions } from "react-native";
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -21,24 +21,24 @@ const Footer = () => {
 
  return (
   <View style={styles.footerContainer}>
-   <View >
+   <View onPress={() => navigation.navigate('Reports')}>
     <Text style={route.name === 'Home' ? styles.activeMenu : styles.menuIcon} onPress={() => navigation.navigate('Home')}>
      <Ionicons style={styles.arrowrightName} name="qr-code" size={22} />
     </Text>
     <Text style={route.name === 'Home' ? styles.menuIconTextActive : styles.menuIconText}>Dashboard</Text>
    </View>
-   <View  >
+   <View onPress={() => navigation.navigate('Reports')}>
     <Text style={route.name === 'Schedule' ? styles.activeMenu : styles.menuIcon} onPress={() => navigation.navigate('Schedule')}>
      <FontAwesome style={styles.arrowrightName} name="calendar" size={22} /></Text>
     <Text style={route.name === 'Schedule' ? styles.menuIconTextActive : styles.menuIconText}>Schedules</Text>
    </View>
-   <View>
+   <View onPress={() => navigation.navigate('Reports')}>
     <Text style={route.name === 'Reports' ? styles.activeMenu : styles.menuIcon} onPress={() => navigation.navigate('Reports')}>
      <MaterialCommunityIcons style={styles.arrowrightName} name="clipboard-text-play-outline" size={22} />
     </Text>
     <Text style={route.name === 'Reports' ? styles.menuIconTextActive : styles.menuIconText}>Reports</Text>
    </View>
-   <View>
+   <View onPress={() => navigation.navigate('Reports')}>
     <Text style={route.name === 'Accounts' ? styles.activeMenu : styles.menuIcon} onPress={() => navigation.navigate('Accounts')}>
      <FontAwesome style={styles.arrowrightName} name="user-circle-o" size={22} />
     </Text>

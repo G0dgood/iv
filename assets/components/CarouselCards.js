@@ -52,7 +52,7 @@ export default CarouselCards
 const styles = StyleSheet.create({
   pagination: {
     position: "relative",
-    top: -75,
+    top: -90,
     left: 0,
     right: 0,
     bottom: 0,
