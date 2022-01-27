@@ -43,7 +43,7 @@ const Notification = () => {
     <View style={[styles.NotifyHead, styles.boxShadow]} >
 
      <View style={styles.Notify}>
-      <View style={styles.NotifyIcon}><Text style={styles.IconPadding}><MaterialCommunityIcons style={styles.notificationIcon1} name="bank" size={30} /> </Text>
+      <View style={styles.NotifyIcon}><Text style={styles.IconPadding}><MaterialCommunityIcons style={styles.notificationIcon1} name="bank" size={20} /> </Text>
       </View>
       <View style={styles.NotifyText}>
 
@@ -57,7 +57,7 @@ const Notification = () => {
     <View style={[styles.NotifyHead, styles.boxShadow]} >
 
      <View style={styles.Notify}>
-      <View style={styles.NotifyIcon2}><Text style={styles.IconPadding}><SimpleLineIcons style={styles.notificationIcon2} name="shield" size={30} /> </Text>
+      <View style={styles.NotifyIcon2}><Text style={styles.IconPadding}><SimpleLineIcons style={styles.notificationIcon2} name="shield" size={20} /> </Text>
       </View>
       <View style={styles.NotifyText}>
 
@@ -70,7 +70,7 @@ const Notification = () => {
     <View style={[styles.NotifyHead, styles.boxShadow]} >
 
      <View style={styles.Notify}>
-      <View style={styles.NotifyIcon3}><Text style={styles.IconPadding}><MaterialCommunityIcons style={styles.notificationIcon3} name="shield-check-outline" size={30} /> </Text>
+      <View style={styles.NotifyIcon3}><Text style={styles.IconPadding}><MaterialCommunityIcons style={styles.notificationIcon3} name="shield-check-outline" size={20} /> </Text>
       </View>
       <View style={styles.NotifyText}>
 
@@ -84,7 +84,7 @@ const Notification = () => {
     <View style={[styles.NotifyHead, styles.boxShadow]} >
 
      <View style={styles.Notify}>
-      <View style={styles.NotifyIcon4}><Text style={styles.IconPadding}><MaterialCommunityIcons style={styles.notificationIcon4} name="bank" size={30} /> </Text>
+      <View style={styles.NotifyIcon4}><Text style={styles.IconPadding}><MaterialCommunityIcons style={styles.notificationIcon4} name="bank" size={20} /> </Text>
       </View>
       <View style={styles.NotifyText}>
 
@@ -98,7 +98,7 @@ const Notification = () => {
     <View style={[styles.NotifyHead, styles.boxShadow]} >
 
      <View style={styles.Notify}>
-      <View style={styles.NotifyIcon5}><Text style={styles.IconPadding}><AntDesign style={styles.notificationIcon5} name="database" size={30} /> </Text>
+      <View style={styles.NotifyIcon5}><Text style={styles.IconPadding}><AntDesign style={styles.notificationIcon5} name="database" size={20} /> </Text>
       </View>
       <View style={styles.NotifyText}>
 
@@ -112,7 +112,7 @@ const Notification = () => {
     <View style={[styles.NotifyHead, styles.boxShadow]} >
 
      <View style={styles.Notify}>
-      <View style={styles.NotifyIcon6}><Text style={styles.IconPadding}><MaterialCommunityIcons style={styles.notificationIcon6} name="bank" size={30} /> </Text>
+      <View style={styles.NotifyIcon6}><Text style={styles.IconPadding}><MaterialCommunityIcons style={styles.notificationIcon6} name="bank" size={20} /> </Text>
       </View>
       <View style={styles.NotifyText}>
 
@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
   alignItems: 'center',
   justifyContent: 'center',
   paddingLeft: 5,
-  height: 35,
+  height: 25,
   position: 'relative',
   left: 0,
   right: 0,
@@ -186,12 +186,12 @@ const styles = StyleSheet.create({
 
  TitleHead: {
   textAlign: 'center',
-  fontWeight: '600',
+  fontWeight: '400',
  },
 
  Notify: {
   flexDirection: 'row',
-  // marginRight: 20,
+
   borderRadius: 5,
   justifyContent: 'space-between',
   alignItems: 'center',
@@ -201,42 +201,40 @@ const styles = StyleSheet.create({
  NotifyIcon: {
   backgroundColor: '#D9E8FD',
   marginRight: 15,
-  // marginLeft: 50,
+
   padding: 10,
   borderRadius: 50,
  },
  NotifyIcon2: {
   backgroundColor: '#FEEAEA',
   marginRight: 15,
-  // marginLeft: 50,
+
   padding: 10,
   borderRadius: 50,
  },
  NotifyIcon3: {
   backgroundColor: '#D9FDFB',
   marginRight: 15,
-  // marginLeft: 50,
   padding: 10,
   borderRadius: 50,
  },
  NotifyIcon4: {
   backgroundColor: '#D9E8FD',
   marginRight: 15,
-  // marginLeft: 50,
   padding: 10,
   borderRadius: 50,
  },
  NotifyIcon5: {
   backgroundColor: '#F1D9FD',
   marginRight: 15,
-  // marginLeft: 50,
+
   padding: 10,
   borderRadius: 50,
  },
  NotifyIcon6: {
   backgroundColor: '#D9E8FD',
   marginRight: 15,
-  // marginLeft: 50,
+
   padding: 10,
   borderRadius: 50,
  },
@@ -244,15 +242,12 @@ const styles = StyleSheet.create({
  NotifyHead: {
   marginTop: 20,
   backgroundColor: 'white',
-  // shadowRadius: 10,
-  // padding: 25,
   borderRadius: 5,
   elevation: 5,
   marginLeft: 20,
   marginRight: 20,
 
-  // padding: 30
-  // paddingVertical: 30,
+
  }
 
 })

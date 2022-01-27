@@ -1,23 +1,26 @@
 import React from 'react';
-import { StyleSheet, View, Text, SafeAreaView } from 'react-native';
+import { StyleSheet, View, Text, SafeAreaView, TouchableOpacity } from 'react-native';
 import { Avatar } from 'react-native-elements';
 import Footer from '../components/Footer';
 import HeaderThree from '../components/HeaderThree';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Feather from 'react-native-vector-icons/Feather';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+export const WIDTH3 = Dimensions.get('window').width - 40
+export const arrow3 = Dimensions.get('window').width - 120
+import { Dimensions } from "react-native";
 
-const Accounts = () => {
+const Accounts = ({ navigation }) => {
  return (
   <SafeAreaView style={styles.AccountsContainer}>
-   <HeaderThree Titles={'MY ACCOUNT'} />
+   <HeaderThree Titles={'MY ACCOUNT'} navigate={'Home'} />
    <View style={styles.Avater}>
     <View style={styles.AvaterImage}>
      <Avatar
       size={140}
       rounded
       source={require('../image/john.png')}
-      title="Bj"
+      title="Profile"
       containerStyle={{ backgroundColor: 'grey' }}>
       <View style={styles.AvaterAccessoryIcon}>
        <Text>
@@ -43,7 +46,7 @@ const Accounts = () => {
       <Feather name="user" size={12} />
      </Text>
     </View>
-    <View style={styles.infoArrowLeft}>
+    <TouchableOpacity style={styles.infoArrowLeft} onPress={() => navigation.navigate('Login')}>
      <View >
       <Text style={styles.AvaterIDColorText}>Personal information</Text>
      </View>
@@ -52,7 +55,7 @@ const Accounts = () => {
        <MaterialIcons style={styles.arrowrightColor} name="keyboard-arrow-right" size={25} />
       </Text>
      </View>
-    </View>
+    </TouchableOpacity>
    </View>
 
    <View style={styles.AvaterIDInfo}>
@@ -61,7 +64,7 @@ const Accounts = () => {
       <Feather name="lock" size={12} />
      </Text>
     </View>
-    <View style={styles.infoArrowLeft}>
+    <TouchableOpacity style={styles.infoArrowLeft} onPress={() => navigation.navigate('PasswordSecurity')}>
      <View >
       <Text style={styles.AvaterIDColorText}>Security</Text>
      </View>
@@ -70,7 +73,7 @@ const Accounts = () => {
        <MaterialIcons style={styles.arrowrightColor} name="keyboard-arrow-right" size={25} />
       </Text>
      </View>
-    </View>
+    </TouchableOpacity>
    </View>
 
    <View style={styles.AvaterIDInfo}>
@@ -91,6 +94,10 @@ const Accounts = () => {
      </View>
     </View>
    </View>
+   <TouchableOpacity style={styles.AvaterIDInfo2} onPress={() => navigation.navigate('Login')}>
+
+    <Text style={styles.logoutText}>Logout</Text>
+   </TouchableOpacity>
    <Footer />
   </SafeAreaView>
  );
@@ -101,9 +108,16 @@ export default Accounts;
 
 
 const styles = StyleSheet.create({
+ logoutText: {
+
+  color: '#fff',
+  fontSize: 16,
+  fontWeight: 'bold'
+ },
+
  arrowrightMove: {
   position: 'absolute',
-  left: Platform.OS === 'android' ? 240 : 275,
+  left: arrow3,
  },
 
  arrowrightColor: {
@@ -111,6 +125,7 @@ const styles = StyleSheet.create({
  },
 
  infoArrowLeft: {
+  flex: 1,
   flexDirection: 'row',
   alignItems: 'center',
 
@@ -138,6 +153,18 @@ const styles = StyleSheet.create({
   color: '#007AFF'
  },
 
+ AvaterIDInfo2: {
+  height: 42,
+  borderColor: '#BEC3D5',
+  borderWidth: 0.8,
+  alignSelf: 'center',
+  borderRadius: 5,
+  flexDirection: 'row',
+  alignItems: 'center',
+  width: WIDTH3,
+  justifyContent: 'center',
+  backgroundColor: '#007AFF'
+ },
  AvaterIDInfo: {
   height: 42,
   borderColor: '#BEC3D5',
@@ -147,7 +174,7 @@ const styles = StyleSheet.create({
   flexDirection: 'row',
   alignItems: 'center',
   marginBottom: 22,
-  width: Platform.OS === 'android' ? 320 : 360,
+  width: WIDTH3,
  },
 
  AvaterIDLine: {
@@ -156,7 +183,7 @@ const styles = StyleSheet.create({
   marginTop: 10,
   marginRight: 68,
   marginLeft: 68,
-  marginBottom: 40,
+  marginBottom: 30,
  },
  AvaterIDText: {
   textAlign: 'center'
@@ -173,13 +200,13 @@ const styles = StyleSheet.create({
   height: 18,
   backgroundColor: '#D9E8FD',
   alignSelf: 'center',
-  marginTop: 20
+  marginTop: 15
  },
  AvaterID2: {
   // width: 130,
   // height: 18,
   alignSelf: 'center',
-  marginTop: 10,
+  marginTop: 8,
 
  },
 
@@ -205,7 +232,7 @@ const styles = StyleSheet.create({
   height: 175,
   width: 175,
   backgroundColor: '#D9E8FD',
-  marginTop: 20,
+  marginTop: 8,
   justifyContent: 'center',
   alignItems: 'center',
   alignSelf: 'center',

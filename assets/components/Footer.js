@@ -76,7 +76,8 @@ const styles = StyleSheet.create({
  activeMenu: {
   textAlign: 'center',
   color: '#007AFF',
-  marginBottom: 1
+  marginBottom: 1,
+
  },
 
  menuIcon: {
