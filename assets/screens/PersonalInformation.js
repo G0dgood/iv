@@ -29,7 +29,7 @@ const PersonalInformation = () => {
    <HeaderThree Titles={'BIO DATA'} navigate={'Accounts'} />
    <View style={styles.InformationIconContainer}>
     <Text>
-     <Feather style={styles.userIcon} name="user" size={100} />
+     <Feather style={styles.userIcon} name="user" size={70} />
     </Text>
    </View>
    <View style={styles.ButtonToggleInfo}>
@@ -341,8 +341,8 @@ const styles = StyleSheet.create({
  },
 
  InformationIconContainer: {
-  width: 174,
-  height: 174,
+  width: 150,
+  height: 140,
   backgroundColor: '#F2F8FF',
   flexDirection: 'row',
   justifyContent: 'center',

@@ -30,7 +30,7 @@ const PasswordSecurity = () => {
    <KeyboardAwareScrollView resetScrollToCoords={{ x: 0, y: 0 }} scrollEnabled={false}>
     <HeaderThree Titles={'SECURITY'} navigate={'Accounts'} />
     <View style={styles.PasswordSecurityIconContainer}>
-     <Text style={styles.PasswordSecurityIcon}><Feather name="lock" size={80} /></Text>
+     <Text style={styles.PasswordSecurityIcon}><Feather name="lock" size={60} /></Text>
     </View>
     <View>
      <Text style={styles.SecurityIconText}>Fill out the form below
@@ -168,8 +168,8 @@ const styles = StyleSheet.create({
  },
 
  PasswordSecurityIconContainer: {
-  width: 174,
-  height: 174,
+  width: 140,
+  height: 140,
   backgroundColor: '#F2F8FF',
   borderRadius: 100,
   justifyContent: 'center',

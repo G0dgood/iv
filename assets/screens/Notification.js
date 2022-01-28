@@ -39,7 +39,7 @@ const Notification = () => {
  return (
   <SafeAreaView style={styles.NotificationContainer} >
    <HeaderTwo Titles={'NOTIFICATION'} />
-   <ScrollView>
+   <ScrollView style={styles.ScrollView}>
     <View style={[styles.NotifyHead, styles.boxShadow]} >
 
      <View style={styles.Notify}>
@@ -133,6 +133,10 @@ export default Notification;
 
 const styles = StyleSheet.create({
 
+ ScrollView: {
+  // marginBottom: 50,
+ },
+
  notificationIcon1: {
   color: '#007AFF'
  },
@@ -182,6 +186,7 @@ const styles = StyleSheet.create({
  NotificationContainer: {
   backgroundColor: '#fff',
   flex: 1,
+  // marginBottom: 50,
  },
 
  TitleHead: {

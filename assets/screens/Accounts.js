@@ -40,13 +40,13 @@ const Accounts = ({ navigation }) => {
    </View>
    <View style={styles.AvaterIDLine} />
 
-   <View style={styles.AvaterIDInfo} >
+   <TouchableOpacity style={styles.AvaterIDInfo} onPress={() => navigation.navigate('PersonalInformation')}>
     <View style={styles.AvaterIDColor}>
      <Text style={styles.colorAvater}>
       <Feather name="user" size={12} />
      </Text>
     </View>
-    <TouchableOpacity style={styles.infoArrowLeft} onPress={() => navigation.navigate('Login')}>
+    <View style={styles.infoArrowLeft} >
      <View >
       <Text style={styles.AvaterIDColorText}>Personal information</Text>
      </View>
@@ -55,16 +55,16 @@ const Accounts = ({ navigation }) => {
        <MaterialIcons style={styles.arrowrightColor} name="keyboard-arrow-right" size={25} />
       </Text>
      </View>
-    </TouchableOpacity>
-   </View>
+    </View>
+   </TouchableOpacity>
 
-   <View style={styles.AvaterIDInfo}>
+   <TouchableOpacity style={styles.AvaterIDInfo} onPress={() => navigation.navigate('PasswordSecurity')}>
     <View style={styles.AvaterIDColor}>
      <Text style={styles.colorAvater}>
       <Feather name="lock" size={12} />
      </Text>
     </View>
-    <TouchableOpacity style={styles.infoArrowLeft} onPress={() => navigation.navigate('PasswordSecurity')}>
+    <View style={styles.infoArrowLeft} >
      <View >
       <Text style={styles.AvaterIDColorText}>Security</Text>
      </View>
@@ -73,10 +73,10 @@ const Accounts = ({ navigation }) => {
        <MaterialIcons style={styles.arrowrightColor} name="keyboard-arrow-right" size={25} />
       </Text>
      </View>
-    </TouchableOpacity>
-   </View>
+    </View>
+   </TouchableOpacity>
 
-   <View style={styles.AvaterIDInfo}>
+   <TouchableOpacity style={styles.AvaterIDInfo} onPress={() => navigation.navigate('Support')}>
     <View style={styles.AvaterIDColor}>
      <Text style={styles.colorAvater}>
       <Feather name="headphones" size={12} />
@@ -93,7 +93,7 @@ const Accounts = ({ navigation }) => {
       </Text>
      </View>
     </View>
-   </View>
+   </TouchableOpacity>
    <TouchableOpacity style={styles.AvaterIDInfo2} onPress={() => navigation.navigate('Login')}>
 
     <Text style={styles.logoutText}>Logout</Text>
@@ -173,17 +173,17 @@ const styles = StyleSheet.create({
   borderRadius: 5,
   flexDirection: 'row',
   alignItems: 'center',
-  marginBottom: 22,
+  marginBottom: 20,
   width: WIDTH3,
  },
 
  AvaterIDLine: {
   borderBottomColor: '#BEC3D5',
   borderBottomWidth: 1,
-  marginTop: 10,
+  marginTop: Platform.OS === 'android' ? 5 : 20,
   marginRight: 68,
   marginLeft: 68,
-  marginBottom: 30,
+  marginBottom: Platform.OS === 'android' ? 15 : 20,
  },
  AvaterIDText: {
   textAlign: 'center'

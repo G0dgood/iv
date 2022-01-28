@@ -146,7 +146,7 @@ export default Home;
 
 const styles = StyleSheet.create({
   ViewLast: {
-    marginBottom: 28,
+    marginBottom: 50,
   },
 
   idcard: {

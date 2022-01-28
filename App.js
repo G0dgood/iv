@@ -15,6 +15,7 @@ import Reports from './assets/screens/Reports';
 import Accounts from './assets/screens/Accounts';
 import PersonalInformation from './assets/screens/PersonalInformation';
 import PasswordSecurity from './assets/screens/PasswordSecurity';
+import Support from './assets/screens/Support';
 
 import {
     useFonts,
@@ -64,6 +65,7 @@ const App = () => {
                     <Stack.Screen name="Accounts" component={Accounts} />
                     <Stack.Screen name="PersonalInformation" component={PersonalInformation} />
                     <Stack.Screen name="PasswordSecurity" component={PasswordSecurity} />
+                    <Stack.Screen name="Support" component={Support} />
 
                 </Stack.Navigator>
             </NavigationContainer>
