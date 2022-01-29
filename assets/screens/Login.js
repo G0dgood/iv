@@ -1,17 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Button, Text, View, Image, TextInput, Alert, TouchableOpacity } from 'react-native';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
+
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const Login = ({ navigation }) => {
 
 
-
-
   return (
-    <View style={styles.container1}>
+    <KeyboardAvoidingView style={styles.container1} behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
       <StatusBar style="auto" />
-      {/* <KeyboardAwareScrollView resetScrollToCoords={{ x: 0, y: 0 }} scrollEnabled={false}> */}
+
 
       <View style={styles.logColor1} >
         <Ionicons style={styles.fingerPrint} name="finger-print" size={93} />
@@ -34,8 +32,8 @@ const Login = ({ navigation }) => {
         <Text style={styles.text3} onPress={() => navigation.navigate('PasswordReset')}>Forgot Password?</Text>
       </View>
 
-      {/* </KeyboardAwareScrollView> */}
-    </View>
+
+    </KeyboardAvoidingView>
   );
 }
 export default Login
@@ -143,7 +141,7 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 18,
     textAlign: 'center',
-    // fontFamily: 'popping',
+    fontFamily: ' Roboto',
     margin: 25,
   },
 

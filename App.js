@@ -13,7 +13,24 @@ import { Dimensions } from "react-native";
 import Schedule from './assets/screens/Schedule';
 import Reports from './assets/screens/Reports';
 import Accounts from './assets/screens/Accounts';
-import { useFonts } from './hooks/useFonts';
+import PersonalInformation from './assets/screens/PersonalInformation';
+import PasswordSecurity from './assets/screens/PasswordSecurity';
+
+import {
+    useFonts,
+    Roboto_100Thin,
+    Roboto_100Thin_Italic,
+    Roboto_300Light,
+    Roboto_300Light_Italic,
+    Roboto_400Regular,
+    Roboto_400Regular_Italic,
+    Roboto_500Medium,
+    Roboto_500Medium_Italic,
+    Roboto_700Bold,
+    Roboto_700Bold_Italic,
+    Roboto_900Black,
+    Roboto_900Black_Italic
+} from '@expo-google-fonts/roboto'
 
 
 const Stack = createNativeStackNavigator();
@@ -22,41 +39,36 @@ const { height } = Dimensions.get('window').height;
 
 
 const App = () => {
-  const [fontsLoaded, setFontsLoaded] = useState(false);
 
-  const LoadFonts = async () => {
-    await useFonts();
-  };
+    let [fontsLoaded] = useFonts({
+        Roboto_400Regular,
+    });
 
 
-  if (!fontsLoaded) {
-    return (
-      <AppLoading
-        startAsync={LoadFonts}
-        onFinish={() => setFontsLoaded(true)}
-        onError={(error) => console.log(error)}
-      />
-    );
-  }
+    if (!fontsLoaded) {
+        return <AppLoading />;
+    } else {
+        return (
+            <NavigationContainer initialRouteName="Login" style={styles.container}>
+                <Stack.Navigator screenOptions={{
+                    headerShown: false
+                }}>
+                    <Stack.Screen name="Login" component={Login} />
+                    <Stack.Screen name="PasswordReset" component={PasswordReset} />
+                    <Stack.Screen name="PasswordEmail" component={PasswordEmail} />
+                    <Stack.Screen name="AboutUs" component={AboutUs} />
+                    <Stack.Screen name="Home" component={Home} />
+                    <Stack.Screen name="Notification" component={Notification} />
+                    <Stack.Screen name="Schedule" component={Schedule} />
+                    <Stack.Screen name="Reports" component={Reports} />
+                    <Stack.Screen name="Accounts" component={Accounts} />
+                    <Stack.Screen name="PersonalInformation" component={PersonalInformation} />
+                    <Stack.Screen name="PasswordSecurity" component={PasswordSecurity} />
 
-  return (
-    <NavigationContainer initialRouteName="Login" style={styles.container}>
-      <Stack.Navigator screenOptions={{
-        headerShown: false
-      }}>
-        <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="PasswordReset" component={PasswordReset} />
-        <Stack.Screen name="PasswordEmail" component={PasswordEmail} />
-        <Stack.Screen name="AboutUs" component={AboutUs} />
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Notification" component={Notification} />
-        <Stack.Screen name="Schedule" component={Schedule} />
-        <Stack.Screen name="Reports" component={Reports} />
-        <Stack.Screen name="Accounts" component={Accounts} />
-
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+                </Stack.Navigator>
+            </NavigationContainer>
+        );
+    };
 };
 
 
@@ -66,12 +78,12 @@ export default App
 
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    fontFamily: ' Poppins_400Regular,',
-    flexDirection: 'column',
-    backgroundColor: '#fff',
-    height: height
+    container: {
+        flex: 1,
+        fontFamily: ' Roboto_400Regular',
+        flexDirection: 'column',
+        backgroundColor: '#fff',
+        height: height
 
-  }
+    }
 });

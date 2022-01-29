@@ -5,7 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 
 
 
-const HeaderThree = ({ Titles }) => {
+const HeaderThree = ({ Titles, navigate }) => {
 
 
 
@@ -14,7 +14,7 @@ const HeaderThree = ({ Titles }) => {
     return (
         <SafeAreaView style={styles.mainContainerHeaderThree}>
             <View>
-                <Text style={styles.headerText} onPress={() => navigation.navigate('Home')}>
+                <Text style={styles.headerText} onPress={() => navigation.navigate(navigate)}>
                     <AntDesign style={styles.arrowleft} name="arrowleft" size={25} />
                 </Text>
             </View>
