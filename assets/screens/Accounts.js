@@ -38,15 +38,15 @@ const Accounts = ({ navigation }) => {
    <View style={styles.AvaterID2}>
     <Text style={styles.AvaterIDText2}>Kelechi Adekunle</Text>
    </View>
-   <View style={styles.AvaterIDLine} />
 
-   <View style={styles.AvaterIDInfo} >
+
+   <TouchableOpacity style={styles.AvaterIDInfo} onPress={() => navigation.navigate('PersonalInformation')}>
     <View style={styles.AvaterIDColor}>
      <Text style={styles.colorAvater}>
       <Feather name="user" size={12} />
      </Text>
     </View>
-    <TouchableOpacity style={styles.infoArrowLeft} onPress={() => navigation.navigate('Login')}>
+    <View style={styles.infoArrowLeft} >
      <View >
       <Text style={styles.AvaterIDColorText}>Personal information</Text>
      </View>
@@ -55,16 +55,16 @@ const Accounts = ({ navigation }) => {
        <MaterialIcons style={styles.arrowrightColor} name="keyboard-arrow-right" size={25} />
       </Text>
      </View>
-    </TouchableOpacity>
-   </View>
+    </View>
+   </TouchableOpacity>
 
-   <View style={styles.AvaterIDInfo}>
+   <TouchableOpacity style={styles.AvaterIDInfo} onPress={() => navigation.navigate('PasswordSecurity')}>
     <View style={styles.AvaterIDColor}>
      <Text style={styles.colorAvater}>
       <Feather name="lock" size={12} />
      </Text>
     </View>
-    <TouchableOpacity style={styles.infoArrowLeft} onPress={() => navigation.navigate('PasswordSecurity')}>
+    <View style={styles.infoArrowLeft} >
      <View >
       <Text style={styles.AvaterIDColorText}>Security</Text>
      </View>
@@ -73,10 +73,10 @@ const Accounts = ({ navigation }) => {
        <MaterialIcons style={styles.arrowrightColor} name="keyboard-arrow-right" size={25} />
       </Text>
      </View>
-    </TouchableOpacity>
-   </View>
+    </View>
+   </TouchableOpacity>
 
-   <View style={styles.AvaterIDInfo}>
+   <TouchableOpacity style={styles.AvaterIDInfo} onPress={() => navigation.navigate('Support')}>
     <View style={styles.AvaterIDColor}>
      <Text style={styles.colorAvater}>
       <Feather name="headphones" size={12} />
@@ -93,10 +93,10 @@ const Accounts = ({ navigation }) => {
       </Text>
      </View>
     </View>
-   </View>
+   </TouchableOpacity>
    <TouchableOpacity style={styles.AvaterIDInfo2} onPress={() => navigation.navigate('Login')}>
 
-    <Text style={styles.logoutText}>Logout</Text>
+    <Text style={styles.logoutText}>LOGOUT</Text>
    </TouchableOpacity>
    <Footer />
   </SafeAreaView>
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
 
   color: '#fff',
   fontSize: 16,
-  fontWeight: 'bold'
+  fontFamily: 'Poppins_600SemiBold'
  },
 
  arrowrightMove: {
@@ -135,10 +135,10 @@ const styles = StyleSheet.create({
  },
 
  AvaterIDColorText: {
-  fontWeight: '600',
   fontSize: 12,
   alignItems: 'center',
-  justifyContent: 'center'
+  justifyContent: 'center',
+  fontFamily: 'Poppins_600SemiBold'
  },
 
  AvaterIDColor: {
@@ -173,26 +173,21 @@ const styles = StyleSheet.create({
   borderRadius: 5,
   flexDirection: 'row',
   alignItems: 'center',
-  marginBottom: 22,
+  marginBottom: 20,
   width: WIDTH3,
  },
 
- AvaterIDLine: {
-  borderBottomColor: '#BEC3D5',
-  borderBottomWidth: 1,
-  marginTop: 10,
-  marginRight: 68,
-  marginLeft: 68,
-  marginBottom: 30,
- },
+
  AvaterIDText: {
-  textAlign: 'center'
+  textAlign: 'center',
+  fontFamily: 'Poppins_400Regular',
+  color: '#007AFF'
  },
  AvaterIDText2: {
   textAlign: 'center',
   fontSize: 24,
   color: '#04224E',
-  fontWeight: 'bold'
+  fontFamily: 'Poppins_600SemiBold'
  },
 
  AvaterID: {
@@ -203,10 +198,9 @@ const styles = StyleSheet.create({
   marginTop: 15
  },
  AvaterID2: {
-  // width: 130,
-  // height: 18,
   alignSelf: 'center',
   marginTop: 8,
+  marginBottom: Platform.OS === 'android' ? 20 : 42,
 
  },
 

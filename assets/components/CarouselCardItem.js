@@ -8,15 +8,24 @@ const CarouselCardItem = ({ item, index }) => {
 
     return (
         <View style={styles.container} key={index}>
-            <Text style={styles.image}><Ionicons style={styles.fingerHome} name="finger-print" size={80} /></Text>
+            <Text style={styles.image}>
+                <Ionicons style={styles.fingerHome} name="finger-print" size={80} />
+            </Text>
             <Text style={styles.header}>{item.title}</Text>
-            <Text style={styles.body}><Text style={styles.cent}></Text>{item.body}
-                <Text style={styles.cent}></Text>
+            <Text style={styles.body}>
+                <Text style={styles.number}>{item.naira}</Text>
+                {item.body}
+                <Text style={styles.cent}>{item.cent}</Text>
             </Text>
         </View>
     )
 }
 const styles = StyleSheet.create({
+
+    number: {
+        fontSize: 25,
+    },
+
     container: {
         backgroundColor: '#007AFF',
         borderRadius: 8,
@@ -32,6 +41,7 @@ const styles = StyleSheet.create({
     },
     cent: {
         fontSize: 25,
+        fontFamily: 'Poppins_600SemiBold',
     },
     image: {
         width: 200,
@@ -45,11 +55,11 @@ const styles = StyleSheet.create({
     },
     header: {
         fontSize: 24,
-        // fontWeight: "bold",
         textAlign: 'center',
         position: 'absolute',
         top: 20, left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center',
-        color: '#fff'
+        color: '#fff',
+        fontFamily: 'Poppins_400Regular'
     },
     body: {
         color: "#222",
@@ -57,8 +67,9 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         textAlign: 'center',
         position: 'absolute',
-        top: 55, left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center',
+        top: 52, left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center',
         color: '#fff',
+        fontFamily: 'Poppins_600SemiBold',
     }
 })
 

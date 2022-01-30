@@ -37,13 +37,11 @@ const styles = StyleSheet.create({
     headerTitle: {
         marginTop: 30,
         textAlign: 'center',
-        fontWeight: '600',
+        fontFamily: 'Poppins_600SemiBold',
 
     },
 
-    // arrowleft: {
-    //     marginLeft: 20,
-    // },
+
     mainContainerHeaderThree: {
         backgroundColor: "#fff",
         flexDirection: "row",

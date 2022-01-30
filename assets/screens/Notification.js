@@ -38,8 +38,8 @@ const Notification = () => {
 
  return (
   <SafeAreaView style={styles.NotificationContainer} >
-   <HeaderTwo Titles={'NOTIFICATION'} />
-   <ScrollView>
+   <HeaderTwo Titles={'NOTIFICATION'} navigates={'Home'} />
+   <ScrollView style={styles.ScrollView}>
     <View style={[styles.NotifyHead, styles.boxShadow]} >
 
      <View style={styles.Notify}>
@@ -133,6 +133,10 @@ export default Notification;
 
 const styles = StyleSheet.create({
 
+ ScrollView: {
+  // marginBottom: 50,
+ },
+
  notificationIcon1: {
   color: '#007AFF'
  },
@@ -154,7 +158,9 @@ const styles = StyleSheet.create({
 
  NotifyTextdown: {
   color: '#aaa',
-  paddingTop: 5
+  paddingTop: 5,
+  fontFamily: 'Poppins_400Regular',
+  fontSize: 12,
  },
 
  NotifyText: {
@@ -175,6 +181,8 @@ const styles = StyleSheet.create({
  },
  NotifyTextLeft: {
   paddingRight: 25,
+  fontFamily: 'Poppins_400Regular',
+  fontSize: 12,
  },
  immerTextLeft: {
  },
@@ -191,7 +199,6 @@ const styles = StyleSheet.create({
 
  Notify: {
   flexDirection: 'row',
-
   borderRadius: 5,
   justifyContent: 'space-between',
   alignItems: 'center',
@@ -201,40 +208,42 @@ const styles = StyleSheet.create({
  NotifyIcon: {
   backgroundColor: '#D9E8FD',
   marginRight: 15,
-
   padding: 10,
   borderRadius: 50,
  },
+
  NotifyIcon2: {
   backgroundColor: '#FEEAEA',
   marginRight: 15,
-
   padding: 10,
   borderRadius: 50,
  },
+
+
  NotifyIcon3: {
   backgroundColor: '#D9FDFB',
   marginRight: 15,
   padding: 10,
   borderRadius: 50,
  },
+
  NotifyIcon4: {
   backgroundColor: '#D9E8FD',
   marginRight: 15,
   padding: 10,
   borderRadius: 50,
  },
+
  NotifyIcon5: {
   backgroundColor: '#F1D9FD',
   marginRight: 15,
-
   padding: 10,
   borderRadius: 50,
  },
+
  NotifyIcon6: {
   backgroundColor: '#D9E8FD',
   marginRight: 15,
-
   padding: 10,
   borderRadius: 50,
  },
@@ -246,8 +255,6 @@ const styles = StyleSheet.create({
   elevation: 5,
   marginLeft: 20,
   marginRight: 20,
-
-
  }
 
 })

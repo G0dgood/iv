@@ -26,7 +26,7 @@ const Login = ({ navigation }) => {
         <TextInput placeholder='Password' placeholderTextColor="#20549D" style={styles.logininput2} />
 
         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Home')}>
-          <Text style={styles.text}>Login</Text>
+          <Text style={styles.text}>LOGIN</Text>
         </TouchableOpacity>
 
         <Text style={styles.text3} onPress={() => navigation.navigate('PasswordReset')}>Forgot Password?</Text>
@@ -74,12 +74,14 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     letterSpacing: 0.25,
     color: 'white',
+    fontFamily: 'Poppins_600SemiBold'
   },
   text3: {
     fontSize: 16,
     textAlign: 'center',
     color: '#20549D',
     marginTop: 32,
+    fontFamily: 'Poppins_600SemiBold'
   },
   inputView: {
     borderBottomColor: 'red',
@@ -102,7 +104,7 @@ const styles = StyleSheet.create({
     marginLeft: 40,
     marginRight: 40,
     marginTop: 27,
-
+    fontFamily: 'Poppins_400Regular'
   },
   logininput2: {
     height: 50,
@@ -114,20 +116,22 @@ const styles = StyleSheet.create({
     marginLeft: 40,
     marginRight: 40,
     marginTop: 25,
+    fontFamily: 'Poppins_400Regular'
   },
 
   logintext1: {
     fontSize: 20,
     textAlign: 'center',
-    marginTop: 25,
+    marginTop: 20,
     color: '#20549D',
-    fontWeight: 'bold',
+    fontWeight: '400',
+    fontFamily: 'Poppins_800ExtraBold',
   },
   logintext2: {
     fontSize: 15,
     textAlign: 'center',
-    // marginTop: 25,
-    color: '#20549D'
+    color: '#20549D',
+    fontFamily: 'Poppins_400Regular'
   },
 
   finger: {
@@ -141,7 +145,7 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 18,
     textAlign: 'center',
-    fontFamily: ' Roboto',
+    fontFamily: 'Poppins_400Regular',
     margin: 25,
   },
 

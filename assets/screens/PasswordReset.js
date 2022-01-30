@@ -63,6 +63,7 @@ const styles = StyleSheet.create({
         marginLeft: 40,
         marginRight: 40,
         marginTop: 27,
+        fontFamily: 'Poppins_400Regular'
     },
 
     button: {
@@ -78,17 +79,18 @@ const styles = StyleSheet.create({
         marginTop: 26,
     },
     textRest: {
-        fontSize: 12,
+        fontSize: 14,
         lineHeight: 21,
         color: 'white',
         fontWeight: 'bold',
+        fontFamily: 'Poppins_600SemiBold',
     },
     passworddiv1: {
         width: 200,
         height: 194,
         backgroundColor: '#F2F8FF',
         borderRadius: 100,
-        marginTop: 134,
+        marginTop: 50,
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'row',
@@ -96,17 +98,19 @@ const styles = StyleSheet.create({
     },
     passworRest: {
         marginTop: 48,
-        fontSize: 24,
+        fontSize: 22,
         color: '#04224E',
         textAlign: 'center',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontFamily: 'Poppins_800ExtraBold',
     },
     passworRestText: {
         marginRight: 40,
         marginLeft: 40,
         color: '#04224E',
         marginTop: 3,
-        textAlign: 'center'
+        textAlign: 'center',
+        fontFamily: 'Poppins_400Regular'
     },
 
 

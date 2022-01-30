@@ -54,10 +54,11 @@ const styles = StyleSheet.create({
     },
 
     instructionsBtnText: {
-        fontSize: 12,
+        fontSize: 14,
         lineHeight: 21,
         color: 'white',
         fontWeight: 'bold',
+        fontFamily: 'Poppins_600SemiBold',
     },
 
     mailSent: {
@@ -65,7 +66,7 @@ const styles = StyleSheet.create({
         height: 194,
         backgroundColor: '#F2F8FF',
         borderRadius: 100,
-        marginTop: 134,
+        marginTop: 50,
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'row',
@@ -74,24 +75,27 @@ const styles = StyleSheet.create({
 
     CheckMail: {
         marginTop: 48,
-        fontSize: 24,
+        fontSize: 22,
         color: '#04224E',
         textAlign: 'center',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontFamily: 'Poppins_600SemiBold',
     },
     instructions: {
         marginRight: 80,
         marginLeft: 80,
         color: '#04224E',
         marginTop: 3,
-        textAlign: 'center'
+        textAlign: 'center',
+        fontFamily: 'Poppins_400Regular'
     },
     checkSpam: {
         marginRight: 50,
         marginLeft: 50,
         color: '#04224E',
         marginTop: 20,
-        textAlign: 'center'
+        textAlign: 'center',
+        fontFamily: 'Poppins_400Regular'
     },
 
 

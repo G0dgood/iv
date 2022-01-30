@@ -29,7 +29,8 @@ const Footer = () => {
    </View>
    <View onPress={() => navigation.navigate('Reports')}>
     <Text style={route.name === 'Schedule' ? styles.activeMenu : styles.menuIcon} onPress={() => navigation.navigate('Schedule')}>
-     <FontAwesome style={styles.arrowrightName} name="calendar" size={22} /></Text>
+     <FontAwesome style={styles.arrowrightName} name="calendar" size={22} />
+    </Text>
     <Text style={route.name === 'Schedule' ? styles.menuIconTextActive : styles.menuIconText}>Schedules</Text>
    </View>
    <View onPress={() => navigation.navigate('Reports')}>
@@ -77,24 +78,28 @@ const styles = StyleSheet.create({
   textAlign: 'center',
   color: '#007AFF',
   marginBottom: 1,
+  fontFamily: 'Poppins_400Regular'
 
  },
 
  menuIcon: {
   textAlign: 'center',
   color: '#BEC3D5',
-  marginBottom: 1
+  marginBottom: 1,
+  fontFamily: 'Poppins_400Regular'
 
  },
  menuIconTextActive: {
   fontWeight: '600',
   color: '#007AFF',
   fontSize: 10,
+  fontFamily: 'Poppins_400Regular'
 
  },
  menuIconText: {
   fontWeight: '600',
   color: '#BEC3D5',
-  fontSize: 10
+  fontSize: 10,
+  fontFamily: 'Poppins_400Regular'
  }
 })
