@@ -6,8 +6,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Zocial from 'react-native-vector-icons/Zocial';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
-const AboutUs = ({ navigation }) => {
 
+const AboutUs = ({ navigation }) => {
 
 
   return (
@@ -25,8 +25,7 @@ const AboutUs = ({ navigation }) => {
           <Ionicons name="location-outline" style={styles.locationIcon} size={30} />
         </View>
         <View style={styles.address}>
-          <Text >The Brunswick Courts, 7/9 Adebisi Oyenola Street
-            Idado Estate, Lekki Epe express way Lagos, Nigeria.</Text>
+          <Text style={styles.address1}>The Brunswick Courts, 7/9 Adebisi Oyenola Street Idado Estate, Lekki Epe express way Lagos, Nigeria.</Text>
 
         </View>
       </View>
@@ -36,8 +35,8 @@ const AboutUs = ({ navigation }) => {
           <FontAwesome name="phone-square" style={styles.locationIcon} size={30} />
         </View>
         <View style={styles.address}>
-          <Text >+234 809 066 6746  </Text>
-          <Text > +234 809 066 6745 </Text>
+          <Text style={styles.address}>+234 809 066 6746 </Text>
+          <Text style={styles.address}>+234 809 066 6745 </Text>
 
         </View>
       </View>
@@ -47,8 +46,8 @@ const AboutUs = ({ navigation }) => {
           <Zocial name="email" size={30} style={styles.locationIcon} />
         </View>
         <View style={styles.address}>
-          <Text >info@iverify.ng</Text>
-          <Text >support@iverify.ng</Text>
+          <Text style={styles.address}>info@iverify.ng</Text>
+          <Text style={styles.address}>support@iverify.ng</Text>
 
         </View>
       </View>
@@ -56,6 +55,7 @@ const AboutUs = ({ navigation }) => {
     </SafeAreaView>
   )
 };
+
 
 export default AboutUs;
 
@@ -66,9 +66,15 @@ const styles = StyleSheet.create({
     paddingTop: Platform.OS === 'android' ? 30 : 0,
   },
 
+  address1: {
+    fontSize: 12,
+    fontFamily: 'Poppins_400Regular'
+  },
   address: {
+    fontSize: 12,
     flex: 1,
-    marginRight: 60
+    marginRight: 60,
+    fontFamily: 'Poppins_400Regular'
   },
 
   locationIcon: {
@@ -104,19 +110,21 @@ const styles = StyleSheet.create({
   companyinfo: {
     textAlign: 'center',
     fontWeight: 'bold',
+    fontFamily: 'Poppins_600SemiBold',
   },
   AboutUsText: {
     marginLeft: 40,
     marginTop: 40,
     fontWeight: '900',
-    fontSize: 30
+    fontSize: 30,
+    fontFamily: 'Poppins_800ExtraBold'
   },
   AboutUsSubText: {
     marginLeft: 40,
     marginRight: 40,
     marginTop: 5,
-    fontSize: 15,
-    fontFamily: 'Poppins-Regular'
+    fontSize: 12,
+    fontFamily: 'Poppins_400Regular'
 
   }
 })

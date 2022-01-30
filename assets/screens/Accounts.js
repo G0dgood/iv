@@ -38,7 +38,7 @@ const Accounts = ({ navigation }) => {
    <View style={styles.AvaterID2}>
     <Text style={styles.AvaterIDText2}>Kelechi Adekunle</Text>
    </View>
-   <View style={styles.AvaterIDLine} />
+
 
    <TouchableOpacity style={styles.AvaterIDInfo} onPress={() => navigation.navigate('PersonalInformation')}>
     <View style={styles.AvaterIDColor}>
@@ -96,7 +96,7 @@ const Accounts = ({ navigation }) => {
    </TouchableOpacity>
    <TouchableOpacity style={styles.AvaterIDInfo2} onPress={() => navigation.navigate('Login')}>
 
-    <Text style={styles.logoutText}>Logout</Text>
+    <Text style={styles.logoutText}>LOGOUT</Text>
    </TouchableOpacity>
    <Footer />
   </SafeAreaView>
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
 
   color: '#fff',
   fontSize: 16,
-  fontWeight: 'bold'
+  fontFamily: 'Poppins_600SemiBold'
  },
 
  arrowrightMove: {
@@ -135,10 +135,10 @@ const styles = StyleSheet.create({
  },
 
  AvaterIDColorText: {
-  fontWeight: '600',
   fontSize: 12,
   alignItems: 'center',
-  justifyContent: 'center'
+  justifyContent: 'center',
+  fontFamily: 'Poppins_600SemiBold'
  },
 
  AvaterIDColor: {
@@ -177,22 +177,17 @@ const styles = StyleSheet.create({
   width: WIDTH3,
  },
 
- AvaterIDLine: {
-  borderBottomColor: '#BEC3D5',
-  borderBottomWidth: 1,
-  marginTop: Platform.OS === 'android' ? 5 : 20,
-  marginRight: 68,
-  marginLeft: 68,
-  marginBottom: Platform.OS === 'android' ? 15 : 20,
- },
+
  AvaterIDText: {
-  textAlign: 'center'
+  textAlign: 'center',
+  fontFamily: 'Poppins_400Regular',
+  color: '#007AFF'
  },
  AvaterIDText2: {
   textAlign: 'center',
   fontSize: 24,
   color: '#04224E',
-  fontWeight: 'bold'
+  fontFamily: 'Poppins_600SemiBold'
  },
 
  AvaterID: {
@@ -203,10 +198,9 @@ const styles = StyleSheet.create({
   marginTop: 15
  },
  AvaterID2: {
-  // width: 130,
-  // height: 18,
   alignSelf: 'center',
   marginTop: 8,
+  marginBottom: Platform.OS === 'android' ? 20 : 42,
 
  },
 

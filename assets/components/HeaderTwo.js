@@ -5,67 +5,76 @@ import { useNavigation } from '@react-navigation/native';
 
 
 
-const HeaderTwo = ({ Titles }) => {
+const HeaderTwo = ({ Titles, navigates }) => {
 
 
 
-    const navigation = useNavigation();
+ const navigation = useNavigation();
 
-    return (
-        <SafeAreaView style={styles.mainContainer}>
-            <View>
+ return (
+  <SafeAreaView style={styles.mainContainer}>
+   <View style={styles.headerarrowleft}>
 
-                <Text style={styles.headerText} onPress={() => navigation.navigate('Home')}>
-                    <AntDesign style={styles.arrowleft} name="arrowleft" size={25} />
-                </Text>
-            </View>
-            <View>
-                <Text style={styles.headerTitle}>{Titles}</Text>
-            </View>
-            <TouchableOpacity style={styles.profileImage} onPress={() => navigation.navigate('Accounts')}>
-                <ImageBackground style={styles.imageHeader} source={require('../image/john.png')} />
-            </TouchableOpacity>
-        </SafeAreaView>
-    )
+    <Text onPress={() => navigation.navigate(navigates)}>
+     <AntDesign style={styles.arrowleft} name="arrowleft" size={25} />
+    </Text>
+   </View>
+   <View>
+    <Text style={styles.headerTitle}>{Titles}</Text>
+   </View>
+   <TouchableOpacity style={styles.profileImage} onPress={() => navigation.navigate('Accounts')}>
+    <ImageBackground style={styles.imageHeader} source={require('../image/john.png')} />
+   </TouchableOpacity>
+  </SafeAreaView>
+ )
 };
 
 export default HeaderTwo;
 
 
 const styles = StyleSheet.create({
-    headerTitle: {
-        marginTop: 30,
-        textAlign: 'center',
-        fontWeight: '600',
 
-    },
+ headerarrowleft: {
+  alignItems: 'center',
+  justifyContent: 'center'
+ },
 
-    arrowleft: {
-        marginLeft: 20,
-    },
-    mainContainer: {
+ headerTitle: {
+  marginTop: 30,
+  textAlign: 'center',
+  fontFamily: 'Poppins_600SemiBold',
 
-        backgroundColor: "#fff",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        marginTop: 10,
-        marginLeft: 20,
-        marginRight: 20,
-        marginBottom: 20,
-        paddingTop: Platform.OS === 'android' ? 25 : 0,
-    },
+ },
 
-    imageHeader: {
-        width: 40,
-        height: 40,
-    },
+ arrowleft: {
+  marginLeft: 20,
+ },
+ mainContainer: {
+  alignItems: 'center',
+  justifyContent: 'center',
+  backgroundColor: "#fff",
+  flexDirection: "row",
+  justifyContent: "space-between",
+  marginTop: 10,
+  marginLeft: 20,
+  marginRight: 20,
+  marginBottom: 20,
+  paddingTop: Platform.OS === 'android' ? 25 : 0,
+ },
+
+ imageHeader: {
+  width: 40,
+  height: 40,
+
+ },
 
 
-    profileImage: {
-        borderRadius: 5,
-        width: 40,
-        height: 40,
-        overflow: 'hidden'
-    }
+ profileImage: {
+  borderRadius: 5,
+  width: 40,
+  height: 40,
+  overflow: 'hidden',
+
+ }
 
 });
