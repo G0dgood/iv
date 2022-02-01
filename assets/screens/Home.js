@@ -237,7 +237,8 @@ const styles = StyleSheet.create({
 
  schedule: {
   fontSize: 15,
-  fontFamily: 'Poppins_400Regular'
+  fontFamily: 'Poppins_400Regular',
+  alignItems: 'center'
  },
 
  arrowrightName: {
