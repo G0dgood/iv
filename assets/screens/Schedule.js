@@ -208,7 +208,7 @@ const styles = StyleSheet.create({
  modalTextInputCOl: {
   flexDirection: 'row',
   justifyContent: 'space-between',
-  paddingTop: Platform.OS === 'android' ? 12 : 20,
+  paddingTop: 12,
   alignItems: 'flex-end',
   borderBottomColor: '#BEC3D5',
   borderBottomWidth: 1
@@ -249,11 +249,11 @@ const styles = StyleSheet.create({
 
  modalView: {
   width: SLIDER_WIDTH,
-  height: Platform.OS === 'android' ? Height2 : Height1,
+  height: 370,
   margin: 20,
   backgroundColor: "white",
   borderRadius: 20,
-  paddingTop: 30,
+  paddingTop: 25,
   alignItems: "center",
   shadowColor: "#000",
   shadowOffset: {
