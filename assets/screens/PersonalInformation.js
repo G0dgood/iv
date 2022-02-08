@@ -279,7 +279,7 @@ const styles = StyleSheet.create({
 
 
   infoInputSaveButton: {
-    color: '#fff'
+    color: '#fff',
   },
 
   infoInputButton: {
@@ -295,7 +295,7 @@ const styles = StyleSheet.create({
 
   PersonalInformationView: {
     marginRight: 28,
-    marginLeft: 28
+    marginLeft: 28,
   },
 
   infoInputColor: {

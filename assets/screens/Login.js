@@ -1,18 +1,36 @@
-import { StatusBar } from 'expo-status-bar';
+import React, { useState } from 'react';
 import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
-
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import * as Animatable from 'react-native-animatable'
+
 
 const Login = ({ navigation }) => {
+
+  const [passwordShown, setPasswordShown] = useState(true);
+  const [icons, setIcons] = useState('eye-off-outline');
+  const togglePasswordVisiblity = () => {
+    setIcons(!icons ? 'eye-outline' : 'eye-off-outline');
+    if (icons === 'eye-off-outline' && passwordShown === true) {
+      setIcons('eye-outline')
+      setPasswordShown(false)
+    }
+    else {
+      setIcons('eye-off-outline')
+      setPasswordShown(true)
+    }
+  };
+
 
 
   return (
     <KeyboardAvoidingView style={styles.container1} behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
-      <StatusBar style="auto" />
 
 
       <View style={styles.logColor1} >
-        <Ionicons style={styles.fingerPrint} name="finger-print" size={93} />
+        <Animatable.View
+          animation='bounceInUp'>
+          <Ionicons style={styles.fingerPrint} name="finger-print" size={93} />
+        </Animatable.View>
         <Image style={styles.loginLogo} source={require('../image/logo-white.png')} />
         <Text style={styles.text2}>We're more than just a workplace.
           We're an evolving family</Text>
@@ -22,10 +40,25 @@ const Login = ({ navigation }) => {
       <View style={styles.logColor2} >
         <Text style={styles.logintext1}>Account Login</Text>
         <Text style={styles.logintext2}>Login using correct credentials</Text>
-        <TextInput placeholder='Agent ID' placeholderTextColor="#20549D" style={styles.logininput} />
-        <TextInput placeholder='Password' placeholderTextColor="#20549D" style={styles.logininput2} />
 
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Home')}>
+        <View>
+          <TextInput placeholder='Agent ID' placeholderTextColor="#20549D" style={styles.logininput} />
+          <TextInput
+            onPress={() => togglePasswordVisiblity()}
+            secureTextEntry={passwordShown}
+            placeholder='Password'
+            placeholderTextColor="#20549D"
+            style={styles.logininput2} />
+          <Ionicons
+            name={icons}
+            size={20}
+            style={styles.eyeOutline}
+            onPress={() => togglePasswordVisiblity()}
+            color={'#BEC3D5'} />
+        </View>
+
+
+        <TouchableOpacity style={styles.button} onPress={() => navigation.replace('Home')}>
           <Text style={styles.text}>LOGIN</Text>
         </TouchableOpacity>
 
@@ -40,6 +73,13 @@ export default Login
 
 
 const styles = StyleSheet.create({
+
+  eyeOutline: {
+    position: 'absolute',
+    right: 60,
+    bottom: 13,
+  },
+
   container1: {
     flex: 1,
     flexDirection: 'column',
@@ -53,7 +93,7 @@ const styles = StyleSheet.create({
     transform: [{ rotate: '130deg' }],
     position: 'absolute',
     left: -100,
-    top: -50
+    top: -65
   },
 
   button: {
@@ -66,7 +106,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#007AFF',
     marginLeft: 40,
     marginRight: 40,
-    marginTop: 26,
+    marginTop: 25,
   },
   text: {
     fontSize: 16,
@@ -80,19 +120,10 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
     color: '#20549D',
-    marginTop: 32,
+    marginTop: 30,
     fontFamily: 'Poppins_600SemiBold'
   },
-  inputView: {
-    borderBottomColor: 'red',
-    borderBottomWidth: 0.5,
-  },
 
-  input: {
-    height: 40,
-    fontSize: 13,
-    padding: 4,
-  },
 
   logininput: {
     height: 50,
@@ -103,7 +134,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginLeft: 40,
     marginRight: 40,
-    marginTop: 27,
+    marginTop: 25,
     fontFamily: 'Poppins_400Regular'
   },
   logininput2: {

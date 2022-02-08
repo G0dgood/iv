@@ -1,5 +1,4 @@
-import { StyleSheet, Text, View, Image, TextInput, Button, Alert, TouchableOpacity, SafeAreaView, KeyboardAvoidingView } from 'react-native';
-// import LoginForm from './assets/screens/login';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, SafeAreaView } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'

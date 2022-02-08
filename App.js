@@ -15,10 +15,12 @@ import Accounts from './assets/screens/Accounts';
 import PersonalInformation from './assets/screens/PersonalInformation';
 import PasswordSecurity from './assets/screens/PasswordSecurity';
 import Support from './assets/screens/Support';
+import SplashScreen from './assets/screens/SplashScreen';
 import Verification from './assets/screens/Verification';
 import ReportStatus from './assets/screens/ReportStatus';
 import AppLoading from 'expo-app-loading';
 import { useFonts, Poppins_400Regular, Poppins_600SemiBold, Poppins_800ExtraBold } from '@expo-google-fonts/poppins';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 
 const Stack = createNativeStackNavigator();
@@ -39,26 +41,31 @@ const App = () => {
   return <AppLoading />;
  } else {
   return (
-   <NavigationContainer initialRouteName="Login" style={styles.container}>
-    <Stack.Navigator screenOptions={{
-     headerShown: false
-    }}>
-     <Stack.Screen name="Login" component={Login} />
-     <Stack.Screen name="PasswordReset" component={PasswordReset} />
-     <Stack.Screen name="PasswordEmail" component={PasswordEmail} />
-     <Stack.Screen name="AboutUs" component={AboutUs} />
-     <Stack.Screen name="Home" component={Home} />
-     <Stack.Screen name="Notification" component={Notification} />
-     <Stack.Screen name="Schedule" component={Schedule} />
-     <Stack.Screen name="Reports" component={Reports} />
-     <Stack.Screen name="Accounts" component={Accounts} />
-     <Stack.Screen name="PersonalInformation" component={PersonalInformation} />
-     <Stack.Screen name="PasswordSecurity" component={PasswordSecurity} />
-     <Stack.Screen name="Support" component={Support} />
-     <Stack.Screen name="Verification" component={Verification} />
-     <Stack.Screen name="ReportStatus" component={ReportStatus} />
+   <NavigationContainer initialRouteName="SplashScreen" style={styles.container}>
+    <SafeAreaProvider>
 
-    </Stack.Navigator>
+
+     <Stack.Navigator screenOptions={{
+      headerShown: false
+     }}>
+      <Stack.Screen name="SplashScreen" component={SplashScreen} />
+      <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="PasswordReset" component={PasswordReset} />
+      <Stack.Screen name="PasswordEmail" component={PasswordEmail} />
+      <Stack.Screen name="AboutUs" component={AboutUs} />
+      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Notification" component={Notification} />
+      <Stack.Screen name="Schedule" component={Schedule} />
+      <Stack.Screen name="Reports" component={Reports} />
+      <Stack.Screen name="Accounts" component={Accounts} />
+      <Stack.Screen name="PersonalInformation" component={PersonalInformation} />
+      <Stack.Screen name="PasswordSecurity" component={PasswordSecurity} />
+      <Stack.Screen name="Support" component={Support} />
+      <Stack.Screen name="Verification" component={Verification} />
+      <Stack.Screen name="ReportStatus" component={ReportStatus} />
+
+     </Stack.Navigator>
+    </SafeAreaProvider>
    </NavigationContainer>
   );
  };
